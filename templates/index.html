@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+    function upload(){
+        document.getElementById("cli").click();
+    }
+    function check(){
+        var a = window.location.href;
+        var a2 = a.split("#");
+        document.getElementById("box").innerHTML = '<h1><b>' + 'Choose Files' + '</b></h1><br>';
+        
+    }
+    </script>
+  </head>
+  <body onload="check();">
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Droplet: Simple Upload Storage<!--&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Sign Up" onclick="check();">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Log In" onclick="check();">Log In</a>--></h3>
+      </div>
+      <hr/>
+      <div>
+      <div id="box"></div>
+      <form action="upload" method="post" enctype="multipart/form-data">
+        <input type="file" onchange="upload();" name="file"><br /><br />
+        <p>Not working? This Should Help:<br><input id="cli" type="submit" value="Upload"></p>
+        <p>This has file Supports of: 'c', 'asm', 'php', 'css', 'class', 'java', 'cs', 'micro', 'data', 'py', 'mpeg', 'ogg', 'm4a', 'mp3', 'mp4', 'zip', 'json', 'dta', 'html', 'js', 'rtf', 'docx', 'odt', 'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif' files</p>
+      </form>
+      </div>
+    </div>
+  </body>
+</html> 
